@@ -1,8 +1,5 @@
 import os
-import re
-import time
 from logs.LogManager import LogManager
-from utils.Csv import Csv
 from utils.Utils import Utils
 from spiders.Spider import Spider
 from utils.Regex import Regex
