@@ -7,6 +7,7 @@ from bs4 import BeautifulSoup
 
 __author__ = 'Rabbi'
 
+
 class EbagsScrapper():
     def __init__(self):
         self.logger = LogManager(__name__)

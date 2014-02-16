@@ -1,3 +1,5 @@
+from utils.Csv import Csv
+
 __author__ = 'Rabbi'
 
 import urllib2
@@ -20,6 +22,11 @@ class TrggroupScrapper():
         self.collectionUrl = 'http://www.trggroup.net/victorinox/index.php?p=124'
         self.mainUrl = 'http://www.trggroup.net/victorinox/'
         self.url = 'http://www.ebags.com/brands'
+        self.csvWriter = Csv('trggroup.csv')
+        csvDataHeader = ['Name1', 'Name2', 'Dimension1', 'Dimension2', 'Spec1', 'Spec2', 'Spec3', 'Product Details',
+                         'Image']
+        self.csvWriter.writeCsvRow(csvDataHeader)
+        self.proxy = urllib2.ProxyHandler({'http': '184.168.55.226:80'})
 
     def scrapData(self):
         if self.onLogin() is True:
@@ -54,8 +61,7 @@ class TrggroupScrapper():
                                 'p': '',
                                 'username': self.username,
                                 'password': self.password}
-            proxy = urllib2.ProxyHandler({'http': '64.34.14.28'})
-            loginData = self.spider.login(self.loginUrl, loginCredentials, proxy=proxy)
+            loginData = self.spider.login(self.loginUrl, loginCredentials, proxy=self.proxy)
             if loginData and len(loginData) > 0:
                 loginData = self.regex.reduceNewLine(loginData)
                 loginData = self.regex.reduceBlankSpace(loginData)
@@ -83,7 +89,62 @@ class TrggroupScrapper():
         if data and len(data) > 0:
             data = self.regex.reduceNewLine(data)
             data = self.regex.reduceBlankSpace(data)
-            soup = BeautifulSoup(data)
+
+            name1 = ''
+            name2 = ''
+            spec1 = ''
+            spec2 = ''
+            ch1 = ''
+            ch2 = ''
+            ch3 = ''
+            ch4 = ''
+            ch5 = ''
+            ch6 = ''
+            productDetail = ''
+            if self.regex.isFoundPattern(
+                    '(?i)<table width="100%">\s*<tr>\s*<td style="font-size:13px;" class="bold">.*?</td>\s*</tr>\s*</table>',
+                    data):
+                nameChunk = self.regex.getSearchedData(
+                    '(?i)(<table width="100%">\s*<tr>\s*<td style="font-size:13px;" class="bold">.*?</td>\s*</tr>\s*</table>)',
+                    data)
+                nameChunks = self.regex.getSearchedDataGroups(
+                    '(?i)<td style="font-size:13px;" class="bold">([^<]*)</td>\s*</tr>\s*<tr>\s*<td>([^<]*)</td></tr>',
+                    nameChunk)
+                name1 = nameChunks.group(1)
+                name2 = nameChunks.group(2)
+                specChunks = self.regex.getSearchedDataGroups('<tr><td>([^<]*)<br>([^<]*)</td>', nameChunk)
+                spec1 = nameChunks.group(1)
+                spec2 = nameChunks.group(2)
+
+            if self.regex.isFoundPattern('(?i)<table width="100%">\s*<tr style="font-weight:bold;">.*?</tr>\s*</table>',
+                                         data):
+                characteristics = self.regex.getSearchedData(
+                    '(?i)(<table width="100%">\s*<tr style="font-weight:bold;">.*?</tr>\s*</table>)',
+                    data)
+                soup = BeautifulSoup(characteristics)
+                chs = soup.find_all('td')
+                ch1 = chs[0].text
+                ch2 = chs[1].text
+                ch3 = chs[2].text
+                ch4 = chs[3].text
+                ch5 = chs[4].text
+                ch6 = chs[5].text
+
+            if self.regex.isFoundPattern('(?i)<div style="overflow:auto;width:100%;height:\d+px;">.*?</div>', data):
+                detailsChunk = self.regex.getSearchedData(
+                    '(?i)(<div style="overflow:auto;width:100%;height:\d+px;">.*?</div>)', data)
+                soup = BeautifulSoup(detailsChunk)
+                productDetail = soup.find('div').text.strip()
+
+            imageSrc = self.regex.getSearchedData('(?i)</td><td align="center"><a target="_blank" href="([^"]*)"', data)
+            imageUrl = 'http://www.trggroup.net/victorinox/' + imageSrc
+            imageName = self.regex.getSearchedData('(?i)([a-zA-Z0-9\.]+)$', imageSrc)
+            csvData = [name1, name2, spec1, spec2, ch1 + ': ' + ch4, ch2 + ': ' + ch5, ch3 + ': ' + ch6, productDetail,
+                       imageName]
+            print csvData
+            self.csvWriter.writeCsvRow(csvData)
+            print 'Downloading image from URL: ', imageUrl
+            self.spider.downloadFile(imageUrl, './images/' + imageName, self.proxy)
 
 
 

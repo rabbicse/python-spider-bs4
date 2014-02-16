@@ -1,15 +1,16 @@
 from cStringIO import StringIO
+import os
 from logs.LogManager import LogManager
 from spiders import config
 import gc
 import time
+from utils.Regex import Regex
 
 __author__ = 'Rabbi'
 
 import urllib
 import urllib2
 import cookielib
-import gzip
 
 
 class Spider:
@@ -18,22 +19,21 @@ class Spider:
         self.opener = None
         self.mycookie = None
 
-    def login(self, url, loginInfo, retry=0):
+    def login(self, url, loginInfo, retry=0, proxy=None):
         """
         Login request for user
         url = '' Ex. http://www.example.com/login
         loginInfo = {} Ex. {'user': 'user', 'pass': 'pass'}
         """
-        host = ('Host', 'www.amazon.com')
         conn = ('Connection', 'keep-alive')
-        enc = ('Accept-Encoding', 'gzip, deflate')
         ac = ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
         ln = ('Accept-Language', 'en-us,en;q=0.5')
-        self.opener = self.createOpener([config.USER_AGENT, conn, enc, ac, ln, host], self.createCookieJarHandler())
+        self.opener = self.createOpener([config.USER_AGENT, conn, ac, ln], self.createCookieJarHandler(), proxy)
         urllib2.install_opener(self.opener)
         try:
             return self.opener.open(url, urllib.urlencode(loginInfo)).read()
         except Exception, x:
+            print x.message
             self.logger.error(x.message)
             if retry < config.RETRY_COUNT:
                 self.login(url, loginInfo, retry + 1)
@@ -46,11 +46,10 @@ class Spider:
         parameters={} Ex. {'user': 'user', 'pass': 'pass'}
         """
         conn = ('Connection', 'keep-alive')
-        enc = ('Accept-Encoding', 'gzip, deflate')
         ac = ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
         ln = ('Accept-Language', 'en-us,en;q=0.5')
 
-        myheaders = [config.USER_AGENT, conn, ac, ln, enc]
+        myheaders = [config.USER_AGENT, conn, ac, ln]
         if self.opener is None:
             self.opener = self.createOpener(myheaders)
             urllib2.install_opener(self.opener)
@@ -58,8 +57,7 @@ class Spider:
             if parameters is None:
                 response = self.opener.open(url, timeout=config.TIMEOUT)
                 self.mycookie = response.headers.get('Set-Cookie')
-                buf = StringIO(response.read())
-                data2 = gzip.GzipFile('', 'r', 0, buf).read()
+                data2 = response.read()
                 response.close()
                 del response
                 gc.collect()
@@ -88,7 +86,7 @@ class Spider:
                 self.fetchData(url, parameters, retry + 1)
         return None
 
-    def createOpener(self, headers=None, handler=None):
+    def createOpener(self, headers=None, handler=None, proxyHandler=None):
         """
         Create opener for fetching data.
         headers = [] Ex. User-agent etc like, [('User-Agent', HEADERS), ....]
@@ -99,10 +97,11 @@ class Spider:
                                       urllib2.HTTPHandler(debuglevel=0),
                                       urllib2.HTTPSHandler(debuglevel=0))
         if headers is not None:
-        #            print headers
             opener.addheaders = headers
         if handler is not None:
             opener.add_handler(handler)
+        if proxyHandler is not None:
+            opener.add_handler(proxyHandler)
         return opener
 
     def createCookieJarHandler(self):
@@ -111,3 +110,43 @@ class Spider:
         """
         cookieJar = cookielib.LWPCookieJar()
         return urllib2.HTTPCookieProcessor(cookieJar)
+
+    def downloadFile(self, url, downloadPath, proxyHandler=None):
+        try:
+            regex = Regex()
+            opener = urllib2.build_opener(urllib2.HTTPRedirectHandler(),
+                                          urllib2.HTTPHandler(debuglevel=0),
+                                          urllib2.HTTPSHandler(debuglevel=0))
+            opener.addheaders = [
+                config.USER_AGENT,
+                ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'),
+                ('Connection', 'keep-alive')]
+
+            if proxyHandler is not None:
+                opener.add_handler(proxyHandler)
+            resp = urllib2.urlopen(url, timeout=30)
+            contentLength = resp.info()['Content-Length']
+            contentLength = regex.getSearchedData('(?i)^(\d+)', contentLength)
+            totalSize = float(contentLength)
+            directory = os.path.dirname(downloadPath)
+            if not os.path.exists(directory):
+                os.makedirs(directory)
+            dl_file = open(downloadPath, 'wb')
+            currentSize = 0
+            CHUNK_SIZE = 32768
+            while True:
+                data = resp.read(CHUNK_SIZE)
+                if not data:
+                    break
+                currentSize += len(data)
+                dl_file.write(data)
+
+                print('============> ' + str(round(float(currentSize * 100) / totalSize, 2)) + '% of ' + str(
+                    totalSize) + ' bytes')
+                if currentSize >= totalSize:
+                    dl_file.close()
+                    return True
+        except Exception, x:
+            print x
+
+        return False
