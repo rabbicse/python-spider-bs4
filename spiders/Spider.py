@@ -28,7 +28,10 @@ class Spider:
         conn = ('Connection', 'keep-alive')
         ac = ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
         ln = ('Accept-Language', 'en-us,en;q=0.5')
-        self.opener = self.createOpener([config.USER_AGENT, conn, ac, ln], self.createCookieJarHandler(), proxy)
+        if proxy is None:
+            self.opener = self.createOpener([config.USER_AGENT, conn, ac, ln], self.createCookieJarHandler())
+        else:
+            self.opener = self.createOpener([config.USER_AGENT, conn, ac, ln], self.createCookieJarHandler(), proxy)
         urllib2.install_opener(self.opener)
         try:
             return self.opener.open(url, urllib.urlencode(loginInfo)).read()

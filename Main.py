@@ -1,7 +1,9 @@
 import getopt
 import sys
 from works.EbagsScrapper import EbagsScrapper
+from works.PentaTransaction import PentaTransaction
 from works.TrggroupScrapper import TrggroupScrapper
+from works.WalgreensScrapper import WalgreensScrapper
 
 __author__ = 'Rabbi'
 
@@ -29,6 +31,10 @@ class Main:
             self.scrapEbags()
         elif arg == 'trggroup':
             self.scrapTrggroup()
+        elif arg == 'pentatr':
+            self.scrapPentaTransaction()
+        elif arg == 'walgreens':
+            self.scrapWalgreens()
         else:
             print 'Unknown spider type.'
             self.usage()
@@ -48,6 +54,15 @@ class Main:
     def scrapTrggroup(self):
         print 'Running spider for Trggroup...'
         scrapper = TrggroupScrapper()
+        scrapper.scrapData()
+
+    def scrapPentaTransaction(self):
+        print 'Running spider for Penta transaction...'
+        scrapper = PentaTransaction()
+        scrapper.scrapData()
+    def scrapWalgreens(self):
+        print 'Running spider for Walgreens...'
+        scrapper = WalgreensScrapper()
         scrapper.scrapData()
 
 
