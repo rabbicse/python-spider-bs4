@@ -1,6 +1,8 @@
 import getopt
 import sys
+from works.AmazonScrapper import AmazonScrapper
 from works.EbagsScrapper import EbagsScrapper
+from works.HighsierraScrapper import HighsierraScrapper
 from works.PentaTransaction import PentaTransaction
 from works.TrggroupScrapper import TrggroupScrapper
 from works.WalgreensScrapper import WalgreensScrapper
@@ -13,8 +15,10 @@ class Main:
         pass
 
     def runSpider(self, argv):
+        spider = ''
+        url = ''
         try:
-            opts, args = getopt.getopt(argv, 'hs:', ['help', 'spider='])
+            opts, args = getopt.getopt(argv, 'hs:u:', ['help', 'spider=', 'url='])
         except Exception, x:
             print x
             self.usage()
@@ -24,9 +28,13 @@ class Main:
                 self.usage()
                 sys.exit()
             elif opt in ('-s', '--spider'):
-                self.startScrapper(arg)
+                spider = arg
+            elif opt in ('-u', '--url'):
+                url = arg
 
-    def startScrapper(self, arg):
+        self.startScrapper(spider, url)
+
+    def startScrapper(self, arg, url=None):
         if arg == 'ebags':
             self.scrapEbags()
         elif arg == 'trggroup':
@@ -35,6 +43,10 @@ class Main:
             self.scrapPentaTransaction()
         elif arg == 'walgreens':
             self.scrapWalgreens()
+        elif arg == 'highsierra':
+            self.scrapHighsierra(url)
+        elif arg == 'amazon':
+            self.scrapAmazon(url)
         else:
             print 'Unknown spider type.'
             self.usage()
@@ -60,9 +72,20 @@ class Main:
         print 'Running spider for Penta transaction...'
         scrapper = PentaTransaction()
         scrapper.scrapData()
+
     def scrapWalgreens(self):
         print 'Running spider for Walgreens...'
         scrapper = WalgreensScrapper()
+        scrapper.scrapData()
+
+    def scrapHighsierra(self, url):
+        print 'Running spider for Highsierra...'
+        scrapper = HighsierraScrapper(url)
+        scrapper.scrapData()
+
+    def scrapAmazon(self, url):
+        print 'Running spider for Amazon...'
+        scrapper = AmazonScrapper(url)
         scrapper.scrapData()
 
 

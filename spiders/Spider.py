@@ -42,7 +42,7 @@ class Spider:
                 self.login(url, loginInfo, retry + 1)
         return None
 
-    def fetchData(self, url, parameters=None, retry=0):
+    def fetchData(self, url, parameters=None, host=None, retry=0):
         """
         Fetch data from a url
         url='' Ex. http://www.example.com, https://www.example.com
@@ -52,7 +52,11 @@ class Spider:
         ac = ('Accept', 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8')
         ln = ('Accept-Language', 'en-us,en;q=0.5')
 
-        myheaders = [config.USER_AGENT, conn, ac, ln]
+        myheaders = [config.USER_AGENT, conn, ac, ln, host]
+        if self.mycookie is not None:
+            cookie = ('Cookie', self.mycookie)
+            myheaders.append(cookie)
+
         if self.opener is None:
             self.opener = self.createOpener(myheaders)
             urllib2.install_opener(self.opener)
@@ -80,13 +84,14 @@ class Spider:
                 else:
                     if retry < config.RETRY_COUNT:
                         time.sleep(5)
-                        self.fetchData(url, parameters, retry + 1)
+                        self.fetchData(url, parameters, host, retry + 1)
         except Exception, x:
+            print 'Error at spider...'
             print x
             self.logger.debug(x)
             if retry < config.RETRY_COUNT:
                 time.sleep(5)
-                self.fetchData(url, parameters, retry + 1)
+                self.fetchData(url, parameters, host, retry + 1)
         return None
 
     def createOpener(self, headers=None, handler=None, proxyHandler=None):

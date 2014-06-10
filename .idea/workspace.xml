@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="346e35f7-d9fa-4610-a801-8ae8e7c5d539" name="Default" comment="" />
+    <list default="true" id="346e35f7-d9fa-4610-a801-8ae8e7c5d539" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/works/AmazonScrapper.py" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/works/HighsierraScrapper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/Csv.py" afterPath="$PROJECT_DIR$/utils/Csv.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Main.py" afterPath="$PROJECT_DIR$/Main.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/Spider.py" afterPath="$PROJECT_DIR$/spiders/Spider.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/works/WalgreensScrapper.py" afterPath="$PROJECT_DIR$/works/WalgreensScrapper.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/spiders/config.py" afterPath="$PROJECT_DIR$/spiders/config.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+    </list>
     <ignored path="python-spider-bs4.iws" />
     <ignored path=".idea/workspace.xml" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -12,7 +21,8 @@
   </component>
   <component name="ChangesViewManager" flattened_view="true" show_ignored="false" />
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/python-spider-bs4$Main.coverage" NAME="Main Coverage Results" MODIFIED="1398017820143" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/python-spider-bs4$WalgreensScrapper.coverage" NAME="WalgreensScrapper Coverage Results" MODIFIED="1400313099759" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/works" />
+    <SUITE FILE_PATH="coverage/python-spider-bs4$Main.coverage" NAME="Main Coverage Results" MODIFIED="1402425842239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
@@ -26,19 +36,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.py" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="33" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-0.1590106" vertical-offset="648" max-vertical-offset="1314">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="EbagsScrapper.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="22" selection-start="0" selection-end="3328" vertical-scroll-proportion="0.0" vertical-offset="180" max-vertical-offset="1494">
+            <state line="88" column="28" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1692">
               <folding />
             </state>
           </provider>
@@ -47,7 +48,27 @@
       <file leaf-file-name="TrggroupScrapper.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="8" selection-start="287" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="252" max-vertical-offset="2808">
+            <state line="24" column="8" selection-start="771" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="2808">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AmazonScrapper.py" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/works/AmazonScrapper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="83" column="0" selection-start="3622" selection-end="3622" vertical-scroll-proportion="4.368421" vertical-offset="0" max-vertical-offset="2016">
+              <folding>
+                <element signature="e#0#29#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="HighsierraScrapper.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/works/HighsierraScrapper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="60" column="19" selection-start="0" selection-end="2376" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1116">
               <folding />
             </state>
           </provider>
@@ -56,25 +77,16 @@
       <file leaf-file-name="Spider.py" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="151" column="28" selection-start="5858" selection-end="5858" vertical-scroll-proportion="0.0" vertical-offset="2718" max-vertical-offset="2880">
+            <state line="58" column="0" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0" vertical-offset="1103" max-vertical-offset="2862">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PentaTransaction.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/works/PentaTransaction.py">
+      <file leaf-file-name="config.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/spiders/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="24" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="396" max-vertical-offset="1026">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="WalgreensScrapper.py" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/works/WalgreensScrapper.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="22" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="522">
+            <state line="2" column="88" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="36" max-vertical-offset="216">
               <folding />
             </state>
           </provider>
@@ -99,24 +111,27 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/logs/config.py" />
-        <option value="$PROJECT_DIR$/spiders/config.py" />
         <option value="$PROJECT_DIR$/works/EbagsScrapper.py" />
         <option value="$PROJECT_DIR$/works/Test.py" />
         <option value="$PROJECT_DIR$/works/TestPattern" />
         <option value="$PROJECT_DIR$/works/TrggroupScrapper.py" />
-        <option value="$PROJECT_DIR$/spiders/Spider.py" />
         <option value="$PROJECT_DIR$/works/PentaTransaction.py" />
         <option value="$PROJECT_DIR$/works/Walgreens.py" />
+        <option value="$PROJECT_DIR$/utils/Csv.py" />
         <option value="$PROJECT_DIR$/works/WalgreensScrapper.py" />
+        <option value="$PROJECT_DIR$/spiders/config.py" />
+        <option value="$PROJECT_DIR$/works/HighsierraScrapper.py" />
+        <option value="$PROJECT_DIR$/spiders/Spider.py" />
         <option value="$PROJECT_DIR$/Main.py" />
+        <option value="$PROJECT_DIR$/works/AmazonScrapper.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="41" />
-    <option name="y" value="24" />
+    <option name="y" value="-4" />
     <option name="width" value="1325" />
-    <option name="height" value="744" />
+    <option name="height" value="772" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -203,6 +218,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python-spider-bs4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="python-spider-bs4" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="spiders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -217,7 +246,7 @@
     <property name="options.lastSelected" value="settings.github" />
     <property name="recentsLimit" value="5" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../WordpressLogin" />
+    <property name="last_opened_file_path" value="$USER_HOME$/PycharmProjects/Omvic" />
     <property name="options.searchVisible" value="true" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="LayoutCode.rearrangeEntriesPython" value="false" />
@@ -243,7 +272,7 @@
       <module name="python-spider-bs4" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Main.py" />
-      <option name="PARAMETERS" value="-s walgreens" />
+      <option name="PARAMETERS" value="-s amazon -u http://www.amazon.com/gp/aag/main?ie=UTF8&amp;asin=&amp;isAmazonFulfilled=&amp;isCBA=&amp;marketplaceID=ATVPDKIKX0DER&amp;orderID=&amp;seller=A2XEO1N8KBQQJT" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
       <method />
@@ -281,6 +310,25 @@
       <module name="python-spider-bs4" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/works/Test.py" />
+      <option name="PARAMETERS" value="" />
+      <RunnerSettings RunnerId="PythonRunner" />
+      <ConfigurationWrapper RunnerId="PythonRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="WalgreensScrapper" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/works" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <module name="python-spider-bs4" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/works/WalgreensScrapper.py" />
       <option name="PARAMETERS" value="" />
       <RunnerSettings RunnerId="PythonRunner" />
       <ConfigurationWrapper RunnerId="PythonRunner" />
@@ -436,16 +484,18 @@
       <option name="USE_PARAM" value="false" />
       <method />
     </configuration>
-    <list size="3">
+    <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Python.Main" />
       <item index="1" class="java.lang.String" itemvalue="Python.EbagsScrapper" />
       <item index="2" class="java.lang.String" itemvalue="Python.Test" />
+      <item index="3" class="java.lang.String" itemvalue="Python.WalgreensScrapper" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="4">
         <item index="0" class="java.lang.String" itemvalue="Python.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Python.Test" />
-        <item index="2" class="java.lang.String" itemvalue="Python.EbagsScrapper" />
+        <item index="1" class="java.lang.String" itemvalue="Python.WalgreensScrapper" />
+        <item index="2" class="java.lang.String" itemvalue="Python.Test" />
+        <item index="3" class="java.lang.String" itemvalue="Python.EbagsScrapper" />
       </list>
     </recent_temporary>
   </component>
@@ -485,15 +535,15 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="41" y="24" width="1325" height="744" extended-state="6" />
+    <frame x="41" y="-4" width="1325" height="772" extended-state="6" />
     <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21813917" sideWeight="0.67343485" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20328382" sideWeight="0.67343485" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30482116" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3800322" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
@@ -531,32 +581,9 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="0" selection-end="3328" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="287" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2340">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="8" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="2400">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/works/PentaTransaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="30" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="47" column="30" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0" vertical-offset="241" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
@@ -568,30 +595,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="0" selection-end="3328" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="37" column="45" selection-start="0" selection-end="3328" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="287" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="14" column="8" selection-start="287" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="91" column="8" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="2400">
-          <folding />
-        </state>
+        <state line="91" column="8" selection-start="3249" selection-end="3249" vertical-scroll-proportion="0.0" vertical-offset="1365" max-vertical-offset="2400" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/PentaTransaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="30" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="855">
-          <folding />
-        </state>
+        <state line="47" column="30" selection-start="1557" selection-end="1557" vertical-scroll-proportion="0.0" vertical-offset="430" max-vertical-offset="855" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
@@ -603,23 +622,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2355">
-          <folding />
-        </state>
+        <state line="18" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
@@ -636,23 +649,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2355">
-          <folding />
-        </state>
+        <state line="18" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="2355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
@@ -669,23 +676,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="18" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="2355">
-          <folding />
-        </state>
+        <state line="18" column="26" selection-start="337" selection-end="337" vertical-scroll-proportion="0.0" vertical-offset="1" max-vertical-offset="2355" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
@@ -702,23 +703,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="23" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2265">
-          <folding />
-        </state>
+        <state line="16" column="23" selection-start="267" selection-end="267" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2265" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
@@ -735,23 +730,17 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245">
-          <folding />
-        </state>
+        <state line="37" column="45" selection-start="1383" selection-end="1383" vertical-scroll-proportion="0.0" vertical-offset="555" max-vertical-offset="1245" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="16" column="13" selection-start="366" selection-end="381" vertical-scroll-proportion="0.0" vertical-offset="240" max-vertical-offset="2340" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="150" column="0" selection-start="5725" selection-end="5725" vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="2265">
-          <folding />
-        </state>
+        <state line="150" column="0" selection-start="5725" selection-end="5725" vertical-scroll-proportion="0.0" vertical-offset="2250" max-vertical-offset="2265" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
@@ -761,16 +750,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="79" column="36" selection-start="3322" selection-end="3322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="79" column="36" selection-start="3322" selection-end="3322" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="27" column="50" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="27" column="50" selection-start="736" selection-end="736" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
@@ -787,9 +772,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="8" column="0" selection-start="195" selection-end="195" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
@@ -801,9 +784,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="43" column="41" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0">
-          <folding />
-        </state>
+        <state line="43" column="41" selection-start="1461" selection-end="1461" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/logs/LogManager.py">
@@ -821,50 +802,73 @@
         <state line="33" column="8" selection-start="739" selection-end="739" vertical-scroll-proportion="0.33333334" vertical-offset="0" max-vertical-offset="0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
+    <entry file="file://$PROJECT_DIR$/utils/Csv.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="8" selection-start="287" selection-end="762" vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="2340">
-          <folding />
-        </state>
+        <state line="62" column="41" selection-start="1597" selection-end="1597" vertical-scroll-proportion="0.3915493" vertical-offset="977" max-vertical-offset="1818" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/works/WalgreensScrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="28" column="0" selection-start="952" selection-end="952" vertical-scroll-proportion="-1.5228426" vertical-offset="1404" max-vertical-offset="2718" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/spiders/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="87" selection-start="33" selection-end="109" vertical-scroll-proportion="0.05076142" vertical-offset="0" max-vertical-offset="591" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="151" column="28" selection-start="5858" selection-end="5858" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2880">
+        <state line="2" column="88" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="216">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/works/PentaTransaction.py">
+    <entry file="file://$PROJECT_DIR$/works/HighsierraScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="24" selection-start="704" selection-end="704" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936">
+        <state line="60" column="19" selection-start="0" selection-end="2376" vertical-scroll-proportion="0.0" vertical-offset="486" max-vertical-offset="1116">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/spiders/Spider.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="58" column="0" selection-start="2010" selection-end="2010" vertical-scroll-proportion="0.0" vertical-offset="941" max-vertical-offset="2862">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/works/EbagsScrapper.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="22" selection-start="0" selection-end="3328" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1494">
-          <folding />
+        <state line="9" column="0" selection-start="196" selection-end="196" vertical-scroll-proportion="-0.09859155" vertical-offset="197" max-vertical-offset="1494">
+          <folding>
+            <element signature="e#0#9#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/works/WalgreensScrapper.py">
+    <entry file="file://$PROJECT_DIR$/works/PentaTransaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="22" selection-start="683" selection-end="683" vertical-scroll-proportion="0.0" vertical-offset="117" max-vertical-offset="522">
+        <state line="23" column="22" selection-start="727" selection-end="727" vertical-scroll-proportion="-0.49577466" vertical-offset="500" max-vertical-offset="936">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="33" selection-start="1023" selection-end="1023" vertical-scroll-proportion="-0.1590106" vertical-offset="648" max-vertical-offset="1314">
+        <state line="88" column="28" selection-start="2679" selection-end="2679" vertical-scroll-proportion="0.0" vertical-offset="918" max-vertical-offset="1692">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/works/TrggroupScrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="24" column="8" selection-start="771" selection-end="1008" vertical-scroll-proportion="0.0" vertical-offset="232" max-vertical-offset="2808">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/works/AmazonScrapper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="83" column="0" selection-start="3622" selection-end="3622" vertical-scroll-proportion="4.368421" vertical-offset="0" max-vertical-offset="2016">
+          <folding>
+            <element signature="e#0#29#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

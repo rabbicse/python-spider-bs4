@@ -1,6 +1,6 @@
 __author__ = 'Rabbi'
 
-HEADERS = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:24.0) Gecko/20100101 Firefox/24.0"
+HEADERS = "	Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:29.0) Gecko/20100101 Firefox/29.0"
 USER_AGENT = ('User-Agent', HEADERS)
 TIMEOUT = 30
 RETRY_COUNT = 4
